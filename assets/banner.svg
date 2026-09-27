@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08070F"/>
+      <stop offset="50%" stop-color="#120D24"/>
+      <stop offset="100%" stop-color="#1A1035"/>
+    </linearGradient>
+
+    <!-- Violet / Neon Accent Gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="50%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+
+    <!-- Glassmorphic Card Fill -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(168, 85, 247, 0.12)"/>
+      <stop offset="100%" stop-color="rgba(56, 189, 248, 0.04)"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Cyber Grid Pattern -->
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(168, 85, 247, 0.07)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" fill="url(#bgGrad)"/>
+  <rect width="1200" height="360" fill="url(#cyberGrid)"/>
+
+  <!-- Futuristic Ambient Glow Orbs -->
+  <circle cx="1050" cy="90" r="160" fill="#7E22CE" opacity="0.25" filter="url(#glow)"/>
+  <circle cx="150" cy="280" r="140" fill="#38BDF8" opacity="0.12" filter="url(#glow)"/>
+
+  <!-- Circuit Decorative Lines -->
+  <path d="M 0 180 L 180 180 L 220 220 L 380 220" fill="none" stroke="rgba(168, 85, 247, 0.3)" stroke-width="2"/>
+  <circle cx="220" cy="220" r="4" fill="#C084FC"/>
+  <circle cx="380" cy="220" r="4" fill="#38BDF8"/>
+
+  <path d="M 820 120 L 960 120 L 1000 80 L 1200 80" fill="none" stroke="rgba(56, 189, 248, 0.3)" stroke-width="2"/>
+  <circle cx="960" cy="120" r="4" fill="#A855F7"/>
+  <circle cx="1000" cy="80" r="4" fill="#38BDF8"/>
+
+  <!-- Glassmorphic Center Card -->
+  <rect x="80" y="45" width="1040" height="270" rx="20" fill="url(#cardGrad)" stroke="rgba(168, 85, 247, 0.3)" stroke-width="1.5"/>
+
+  <!-- Pill / Medical Icon with Glow -->
+  <g transform="translate(140, 110)">
+    <!-- Outer Hexagon / Shield -->
+    <polygon points="45,0 90,26 90,78 45,104 0,78 0,26" fill="rgba(168, 85, 247, 0.15)" stroke="url(#accentGrad)" stroke-width="2.5" filter="url(#subtleGlow)"/>
+    <!-- Capsule Pill Symbol -->
+    <g transform="translate(45, 52) rotate(-45)">
+      <rect x="-14" y="-28" width="28" height="28" rx="14" fill="#A855F7"/>
+      <rect x="-14" y="0" width="28" height="28" rx="14" fill="#38BDF8"/>
+      <line x1="-14" y1="0" x2="14" y2="0" stroke="#0F0C20" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- Typography: Project Header -->
+  <text x="270" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="900" letter-spacing="4" fill="url(#accentGrad)" filter="url(#subtleGlow)">FILLPILL</text>
+
+  <text x="560" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="3" fill="#A855F7" opacity="0.9">v1.0.0 // EMBEDDED HEALTHCARE</text>
+
+  <!-- Tagline / Subtitle -->
+  <text x="270" y="172" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="400" letter-spacing="1.2" fill="#E2E8F0">
+    Smart Medication Adherence &amp; Automated Caregiver Escalation System
+  </text>
+
+  <!-- Sub-bullet Description -->
+  <text x="270" y="206" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="400" fill="#94A3B8">
+    Autonomous Arduino Uno platform with RTC DS3231 scheduling, tamper/early-open telemetry, and GSM SMS dispatch
+  </text>
+
+  <!-- Pill Badges inside banner -->
+  <g transform="translate(270, 235)">
+    <!-- Badge 1: Arduino Uno -->
+    <rect x="0" y="0" width="130" height="32" rx="16" fill="rgba(168, 85, 247, 0.15)" stroke="#A855F7" stroke-width="1"/>
+    <text x="65" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#E9D5FF" text-anchor="middle">ARDUINO UNO</text>
+
+    <!-- Badge 2: RTC DS3231 -->
+    <rect x="142" y="0" width="125" height="32" rx="16" fill="rgba(56, 189, 248, 0.12)" stroke="#38BDF8" stroke-width="1"/>
+    <text x="204" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#BAE6FD" text-anchor="middle">RTC DS3231</text>
+
+    <!-- Badge 3: GSM SIM800L -->
+    <rect x="279" y="0" width="135" height="32" rx="16" fill="rgba(168, 85, 247, 0.15)" stroke="#C084FC" stroke-width="1"/>
+    <text x="346" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#F3E8FF" text-anchor="middle">GSM SIM800L</text>
+
+    <!-- Badge 4: LCD 16x2 I2C -->
+    <rect x="426" y="0" width="135" height="32" rx="16" fill="rgba(56, 189, 248, 0.12)" stroke="#38BDF8" stroke-width="1"/>
+    <text x="493" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#BAE6FD" text-anchor="middle">LCD 16x2 I2C</text>
+
+    <!-- Badge 5: TAMPER SENSING -->
+    <rect x="573" y="0" width="150" height="32" rx="16" fill="rgba(239, 68, 68, 0.15)" stroke="#F87171" stroke-width="1"/>
+    <text x="648" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#FECACA" text-anchor="middle">TAMPER ALERT</text>
+  </g>
+</svg>
